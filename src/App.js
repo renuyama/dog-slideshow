@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-
+import FileManager from "./FileManager";
 import { auth, googleProvider, db } from "./firebaseConfig";
 import {
   signInWithPopup,
@@ -218,6 +218,7 @@ function App() {
           ) : null
         )}
       </div>
+        <FileManager />
 
       {/* USERS PANEL (everyone who logged in) */}
       <div
@@ -261,6 +262,7 @@ function App() {
         ))}
       </div>
     </div>
+    
   );
 }
 
