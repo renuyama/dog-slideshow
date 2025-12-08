@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import AzureFiles from "./AzureFiles";
 import "./App.css";
-import FileManager from "./FileManager";
+
 import { auth, googleProvider, db } from "./firebaseConfig";
 import {
   signInWithPopup,
@@ -218,7 +219,6 @@ function App() {
           ) : null
         )}
       </div>
-        <FileManager />
 
       {/* USERS PANEL (everyone who logged in) */}
       <div
@@ -228,6 +228,7 @@ function App() {
           marginTop: "20px",
         }}
       >
+        <AzureFiles />
         <h2>Users who have logged in</h2>
         {allUsers.length === 0 && <p>No users stored yet.</p>}
 
